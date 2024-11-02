@@ -6,7 +6,7 @@ const buttonContainer = document.getElementById('buttons');
 // Esperar antes de reproducir el video
 setTimeout(() => {
     video.play();
-}, 2000);
+}, 500);
 
 // Hacer que el logo aparezca 
 setTimeout(() => {

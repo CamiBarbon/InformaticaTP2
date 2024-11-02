@@ -1,14 +1,18 @@
-*  {
+* {
   font-family: "Dosis", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <400>;
-  font-style: normal;
+  font-weight: 400;
+  margin: 0; /* Eliminar margenes globales */
+  padding: 0; /* Eliminar padding global */
 }
 
 body {
-  margin: 0;
-  overflow: hidden;
+  background-color: black;
+  display: flex; /* Usar flexbox en el cuerpo */
+  flex-direction: column; /* Alinear los elementos en columna */
+  min-height: 100vh; /* Asegurar que el cuerpo ocupe al menos la altura de la ventana */
+  margin: 0; /* Eliminar el margen por defecto */
 }
+
 
 .video-background {
   position: fixed;
@@ -16,13 +20,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajustar el video para cubrir todo el fondo */
+  object-fit: cover;
   z-index: -1; 
 }
 
 .content {
   position: relative;
-  z-index: 1; 
+  z-index: 2; /* Asegúrate de que el contenido esté por encima del video */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,12 +36,13 @@ body {
 }
 
 .logo {
-  max-width: 800px;
+  max-width: 600px;
   opacity: 0; 
   transition: opacity 1s; 
+  z-index: 1; /* Logo detrás del contenido */
 }
 
-.buttons {
+.buttons {  
   position: absolute;
   right: 20px; 
   top: 50%; 
@@ -46,16 +51,145 @@ body {
   transition: opacity 1s; 
   display: flex; 
   flex-direction: column; 
+  z-index: 3; /* Asegúrate de que los botones estén por encima del logo */
 }
 
 .transparent-button {
+  text-align: center;
+  text-decoration: none;
+  border: none;
   margin: 10px 0; 
   padding: 10px 20px;
-  font-size: 16px;
-  color: white;
+  font-size: 22px;
+  color: #b579ae; 
   background: none; 
-  border: none; 
   cursor: pointer;
-  opacity: 0; /
-  transition: opacity 0.5s; 
+  opacity: 0; 
+  transition: opacity 0.5s, color 0.3s, background 0.3s; 
 }
+
+/* Cambios al pasar el mouse */
+.transparent-button:hover {
+  color: white; /* Cambiar color a blanco */
+}
+
+/* Menú*/
+.menu {
+  position: absolute; /* Permitir que el menú se posicione sobre el contenido */
+  top: 0; /* Alinear al borde superior */
+  right: 0; /* Alinear al borde derecho */
+  width: 200px; /* Ancho del menú */
+  text-align: center; /* Centrar el contenido dentro del menú */
+}
+
+.logo-menu {
+  width: 60%; /* Ajusta el tamaño de la imagen */
+  cursor: pointer;
+  display: block; /* Asegúrate de que el logo ocupe su ancho */
+  margin: 0 auto; /* Centrar el logo */
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.7); /* Fondo transparente */
+  transition: max-height 0.3s ease;
+  max-height: 200px; /* Ajustar a un tamaño que permita ver todos los items */
+  overflow: hidden; /* Evita mostrar elementos ocultos */
+}
+
+.menu-items li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* Separador entre items */
+}
+
+.menu-items li:last-child {
+  border-bottom: none; /* Quitar el separador del último item */
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: black;
+  display: block; /* Hacer que el enlace ocupe todo el ancho */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  font-weight: bold; /* Aumentar el peso de la tipografía */
+}
+
+.menu-items a:hover {
+  color: #612159; /* Color del texto al hacer hover */
+  text-decoration: none;
+}
+
+/* galería realismo - recientes */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  max-width: 1080px; /* Ancho total de la cuadrícula */
+  margin: 0 auto; /* Centrar la cuadrícula */
+  padding: 0; /* Eliminar padding */
+  position: relative; /* Para posicionar imágenes en relación a este contenedor */
+}
+
+.galeria img {
+  width: calc(100% - 10px); /* Restar margen para ajustar el ancho */
+  height: auto; /* Mantener la proporción de la imagen */
+  object-fit: cover; /* Asegurar que la imagen cubra el área sin deformarse */
+  margin: 5px; 
+  transition: transform 0.3s ease; /* Suavizar la transición al cambiar tamaño */
+  position: relative; /* Establecer posición relativa para cada imagen */
+  z-index: 0; /* Z-index por defecto */
+}
+
+.galeria img:hover {
+  transform: scale(2); /* Ampliar la imagen a 1.5x su tamaño */
+  z-index: 1; /* Asegurar que la imagen ampliada esté por encima de las demás */
+}
+
+/* Ajustar la imagen ampliada para centrarla respecto del viewport */
+.galeria img:hover::after {
+  content: ""; /* Agregar un pseudo-elemento */
+  position: fixed; /* Fijo en el viewport */
+  top: 50%; /* Centrarse verticalmente */
+  left: 50%; /* Centrarse horizontalmente */
+  width: calc(150%); /* Ampliar a 150% del tamaño */
+  height: calc(150%); /* Ampliar a 150% del tamaño */
+  transform: translate(-50%, -50%); /* Centrar el pseudo-elemento */
+  background: #e0d7df; /* Fondo semi-transparente */
+  z-index: 0; /* Por debajo de la imagen */
+}
+
+footer {
+  color: rgb(255, 255, 255); /* Color del texto */
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  margin-top: auto;
+}
+
+footer h3 {
+  text-align: center;
+}
+.container {
+  display: flex; /* Usar flexbox para el contenido */
+  flex-direction: row; /* Alinear en fila */
+  justify-content: space-between; /* Espacio entre columnas */
+  width: 100%;
+  background-color: #3d0036ce; /* Establece el color de fondo */
+}
+
+.form-control {
+  max-width: 100%; /* Ancho completo de los campos */
+  width: 300px; /* Ajusta el ancho según necesites */
+  margin: 0 auto; /* Centrar los campos */
+}
+
+.col-md-4 {
+  flex: 0 0 auto; /* Permitir que la columna no se comprima */
+  max-width: 400px; /* Ajustar el ancho máximo de la columna */
+}
+
