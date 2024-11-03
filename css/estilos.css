@@ -6,6 +6,8 @@
 }
 
 body {
+  color: #ffffff;
+  padding-top: 50px;
   background-color: black;
   display: flex; /* Usar flexbox en el cuerpo */
   flex-direction: column; /* Alinear los elementos en columna */
@@ -80,6 +82,7 @@ body {
   right: 0; /* Alinear al borde derecho */
   width: 200px; /* Ancho del menú */
   text-align: center; /* Centrar el contenido dentro del menú */
+  z-index: 10;
 }
 
 .logo-menu {
@@ -93,7 +96,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  background: rgba(255, 255, 255, 0.7); /* Fondo transparente */
+  background: rgba(255, 255, 255, 0.075); /* Fondo transparente */
   transition: max-height 0.3s ease;
   max-height: 200px; /* Ajustar a un tamaño que permita ver todos los items */
   overflow: hidden; /* Evita mostrar elementos ocultos */
@@ -110,15 +113,139 @@ body {
 
 .menu-items a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   display: block; /* Hacer que el enlace ocupe todo el ancho */
   transition: color 0.3s ease, text-decoration 0.3s ease;
   font-weight: bold; /* Aumentar el peso de la tipografía */
 }
 
 .menu-items a:hover {
-  color: #612159; /* Color del texto al hacer hover */
+  color: #a05195; 
   text-decoration: none;
+}
+.menu-items a:visited {
+  color: #6d6d6d; 
+  text-decoration: none;
+}
+
+body h1 {
+  font-weight: bold;
+  text-align: center;
+  color: #5a0550;
+}
+body p {
+  text-align: center;
+  color: #b579ae;
+}
+.cursos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;}
+article {
+  font-size: 20px;
+  padding: 1em;
+  color: #ffffff;
+  background-color: #b579aea1;
+  align-self: center;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 15px #3d0036; /* Sombra para efecto flotante */
+  margin: 20px; /* Espacio alrededor del artículo */
+  transition: transform 0.3s ease; /* Transición suave para el hover */
+}
+article a:link {
+  color: #a05195;
+}
+article a:visited { 
+  color: #d6d455;
+}
+article h3 {
+  text-align: center;
+}
+div a:link {
+  color: #a05195;
+}
+div a:visited { 
+  color: #d6d455;
+}
+
+
+#img-cursos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: center; /* Centra verticalmente si es necesario */
+  margin: 20px 0; /* Espacio arriba y abajo */
+}
+body img {
+  padding: 2px;
+  max-width: 500px;
+}
+
+#sobre-mi {
+  display: flex; /* Usar flexbox para centrar */
+  flex-direction: column; /* Alinear los elementos en columna */
+  align-items: center; /* Centrar los elementos horizontalmente */
+  background-color: #b579ae;
+  padding: 2em;
+  margin-bottom: 20px; /* Agregar margen inferior para separar del footer */
+}
+.btn-sobre-mi {
+  display: inline-block; /* Permite que el botón tenga un ancho ajustable */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de la fuente */
+  color: #000000; /* Color del texto: negro */
+  background-color: #ffffff; /* Color de fondo: rosa */
+  border: none; /* Sin borde */
+  border-radius: 25px; /* Bordes redondeados */
+  text-align: center; /* Centrar texto */
+  text-decoration: none; /* Sin subrayado */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.btn-sobre-mi:hover {
+  color: white;
+  background-color: #3d0036; /* Color de fondo al pasar el mouse */
+  transform: translateY(-2px); /* Efecto de levantamiento */
+}
+
+/*carátula realismo */
+#caratula-real1 {
+  background-image: url('../img/caratula-recientes.jpg'); /* Ruta a tu imagen */
+  background-size: cover
+  background-position: center; /* Centra la imagen */
+  height: 600px; /* Altura del contenedor del encabezado */
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+  color: white;
+  margin: 20px 0; /* Espaciado superior e inferior */
+
+}
+#caratula-real2 {
+  background-image: url('../img/caratula-series.jpg'); /* Ruta a tu imagen */
+  background-size: cover
+  background-position: center; /* Centra la imagen */
+  height: 600px; /* Altura del contenedor del encabezado */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  color: white;
+  margin: 20px 0; /* Espaciado superior e inferior */
+
+}
+
+#caratula-real a {
+  color: inherit; /* Color del enlace que hereda del h2 */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 24px; /* Tamaño de fuente */
+}
+
+.background-image a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
 }
 
 /* galería realismo - recientes */
@@ -160,26 +287,20 @@ body {
 }
 
 footer {
+  width: 100%;
+  background-color: #3d0036; /* Establece el color de fondo */
   color: rgb(255, 255, 255); /* Color del texto */
   text-align: center;
-  max-width: 1100px;
-  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0;
-  margin-top: auto;
+  flex-direction: row;
+  justify-content: center
 }
 
 footer h3 {
   text-align: center;
 }
-.container {
-  display: flex; /* Usar flexbox para el contenido */
-  flex-direction: row; /* Alinear en fila */
-  justify-content: space-between; /* Espacio entre columnas */
-  width: 100%;
-  background-color: #3d0036ce; /* Establece el color de fondo */
+footer div {
+  background-color: #3d0036; /* Establece el color de fondo */
 }
 
 .form-control {
