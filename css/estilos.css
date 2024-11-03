@@ -7,11 +7,13 @@
 
 
 body {
+  overflow-x: hidden;
   color: #ffffff;
   background-color: rgb(68, 68, 68);
   display: flex;
   flex-direction: column; 
-  margin: 0; 
+  margin: 0;
+  min-height: 100vh 
 }
 
  /*landing */
@@ -77,7 +79,7 @@ body {
 /* Menú*/
 .menu {
   position: absolute; 
-  top: 20px; 
+  top: 15px; 
   right: 0; 
   width: 200px; 
   text-align: center; 
@@ -85,7 +87,7 @@ body {
 }
 
 .logo-menu {
-  width: 85%; /* Ajusta el tamaño de la imagen */
+  width: 63%; /* Ajusta el tamaño de la imagen */
   cursor: pointer;
   display: block; 
   margin: 0 auto; 
@@ -125,11 +127,12 @@ body {
 
 h1 {
   background-color: #ae8774;
-  padding: 60px 40px;
-  font-size: 60px;
+  padding: 40px;
+  font-size: 55px;
   font-weight: 700;
   text-align: center;
   color: #ffffff;
+  margin-bottom: 5px; /* Espacio debajo del encabezado */
 }
 
 h2 {
@@ -163,24 +166,11 @@ body p {
 
 #img-cursos {
   display: flex;
-  flex-direction: row;
-  justify-content: center; /* Centra las imágenes horizontalmente */
-  align-items: center; /* Centra verticalmente si es necesario */
-  margin: 20px 0; /* Espacio arriba y abajo */
-}
-body img {
-  padding: 2px;
-  max-width: 500px;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra las imágenes */
+  gap: 10px; /* Espaciado entre imágenes */
 }
 
-#sobre-mi {
-  display: flex; /* Usar flexbox para centrar */
-  flex-direction: column; /* Alinear los elementos en columna */
-  align-items: center; /* Centrar los elementos horizontalmente */
-  background-color: #9f8d81;
-  padding: 2em;
-  margin-bottom: 20px; /* Agregar margen inferior para separar del footer */
-}
 .btn-sobre-mi {
   display: inline-block; 
   padding: 10px 20px; 
@@ -220,24 +210,18 @@ body img {
 }
 
 .sobre-mi-texto {
-  max-width: 600px; /* Ajusta el ancho máximo del texto */
-}
-
-.sobre-mi-texto p {
+  padding: 1em;
+  max-width: 600px;
   font-size: 18px;
-}
-
-h1 {
-  margin-bottom: 15px; /* Espacio debajo del encabezado */
 }
 
 
 /* Galeria estudiantes*/
 
 .galeria-estudiantes {
-  padding: 5px 10px;
-  background-color: #ae8774; 
-  color: black; 
+  padding: 20px;
+  background-color: black; 
+  color: white; 
   border-radius: 25px;
   text-decoration: none;
   display: inline-block; 
@@ -349,59 +333,152 @@ h1 {
 }
 
 .modal-content {
-  background-color: transparent; /* Eliminar el color de fondo */
+  background-color: transparent; /
 }
 
 footer {
   width: 100%;
-  background-color: #ae8774; /* Establece el color de fondo */
-  color: rgb(255, 255, 255); /* Color del texto */
+  background-color: #ae8774; 
+  color: rgb(255, 255, 255); 
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: center
+  justify-content: center;
+  margin-top: auto;
+  padding-bottom: 25px;
 }
 
-footer h3 {
-  text-align: center;
-}
 footer div {
-  background-color: #ae8774; /* Establece el color de fondo */
-}
-
-footer img {
-  align-self: center;
-  padding-left: 100px;
-  max-width: 400px;;
+  background-color: #ae8774; 
 }
 
 #logo-footer {
-  max-width: 500px;
+  max-width: 400px;
+}
+
+.footer-logo {
+  width: 70px;
+  height: auto; 
+  margin: 0;
+}
+
+.social-logos {
+  display: flex;
+  justify-content: center; 
+}
+
+.overlay {
+  position: fixed; 
+  bottom: -10px; 
+  left: 0; 
+  pointer-events: none;
+}
+
+.mano-img {
+  width: 300px; 
+  animation: shake 3s infinite;
+}
+
+/* Animación para sacudir la imagen con pausa */
+@keyframes shake {
+  0%, 10% { transform: translate(0, 0); }
+  20% { transform: translate(-2px, -2px); }
+  30% { transform: translate(2px, 2px); }
+  40% { transform: translate(-2px, 2px); }
+  50% { transform: translate(2px, -2px); }
+  60% { transform: translate(0, 0); }
+  70% { transform: translate(0, 0); } 
+  100% { transform: translate(0, 0); } 
+}
+
+#contactame {
+    display: inline-block; 
+    padding: 15px 30px;
+    font-size: 20px; 
+    color: #ffffff; 
+    background-color: #a05195; 
+    border: none; 
+    border-radius: 25px; 
+    text-decoration: none; 
+    text-align: center; /
+    transition: background-color 0.3s, transform 0.2s; /
+    cursor: pointer; 
+    margin: 1em; 
+}
+
+#contactame:hover {
+    background-color: #ffffff; /* Color al pasar el mouse */
+    transform: translateY(-2px); 
+    color: #a05195;
+}
+
+
+/* Estilos del formulario */
+.container {
+  width: 800px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+fieldset {
+  padding: 3em;
+}
+
+#contact-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.95); 
+  border-radius: 15px; 
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.575); 
+}
+
+.form-label {
+  color: #000000; 
+  margin: 1em;
 }
 
 .form-control {
-  max-width: 100%; /* Ancho completo de los campos */
-  width: 300px; /* Ajusta el ancho según necesites */
-  margin: 0 auto; /* Centrar los campos */
+  height: 30px; 
 }
 
-.col-md-4 {
-  flex: 0 0 auto; /* Permitir que la columna no se comprima */
-  max-width: 400px; /* Ajustar el ancho máximo de la columna */
+.btn-primary {
+  background-color: #a05195; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  transition: background-color 0.3s; /* Transición suave al cambiar color */
+  margin-top: 20px; /* Margen superior para separación */
+  padding: 12px 20px; /* Espaciado interno del botón */
+  font-size: 18px; /* Tamaño de fuente del botón */
 }
 
+.btn-primary:hover {
+  background-color: #ae8774; /* Color al pasar el mouse */
+}
+
+@media (max-width: 900px) {
+  .overlay{
+    display: none; 
+  }
+}
 
 @media (max-width: 768px) {
+  h1 {
+    padding-top: 100px;
+    font-size: 40px; /* Reduce el tamaño del encabezado */
+  }
   .menu {
-    position: fixed; /* Fijar en el top del viewport */
+    position: fixed;
     top: 0; 
     right: 0; 
-    width: 100%; /* Ocupar el ancho completo */
-    background: rgba(116, 116, 116, 0.89); /* Fondo semi-transparente */
+    width: 100%; 
+    background: rgba(116, 116, 116, 0.89); 
     z-index: 10;
-    display: flex; /* Usar flexbox para disposición horizontal */
-    align-items: center; /* Centrar verticalmente */
-    padding: 2px; /* Espaciado */
+    display: flex; 
+    align-items: center;
+    padding: 2px; 
   }
   
   .logo-menu {
@@ -409,44 +486,96 @@ footer img {
     cursor: pointer;
     display: block; 
     margin: 0 auto; 
-    transition: width 0.3s ease; /* Transición para cambios de tamaño */
+    transition: width 0.3s ease; 
   }
   
   .menu-items {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Cambiar a horizontal */
-    flex-grow: 1; /* Hacer que los elementos ocupen el espacio disponible */
-    justify-content: center; /* Centrar los elementos */
+    display: flex; 
+    flex-grow: 1; 
+    justify-content: center; 
   }
   
   .menu-items li {
-    padding: 10px 20px; /* Espacio horizontal */
+    padding: 10px 20px; 
   }
   
   .menu-items a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    transition: color 0.3s; /* Transición para el color */
+    transition: color 0.3s; 
   }
   
   .menu-items a:hover {
-    color: #a05195; /* Cambiar color al pasar el mouse */
+    color: #a05195; 
   }
-  
+   
+  .content {
+    height: auto; /* Permitir que la altura se ajuste al contenido */
+    padding: 20px; /* Agregar algo de espacio alrededor */
+  }
+
+  .logo {
+    max-width: 100%; /* Hacer que el logo ocupe el ancho completo */
+    opacity: 1; /* Asegurarte de que el logo sea visible */
+  }
+
+  .buttons {
+    position: relative; /* Cambiar a posición relativa para móviles */
+    right: auto; 
+    top: auto; 
+    transform: none; /* Remover transformaciones */
+    opacity: 1; /* Asegurarte de que los botones sean visibles */
+    flex-direction: column; /* Mantener la dirección en columna */
+    align-items: center; /* Centrar los botones */
+  }
+
+  .transparent-button {
+    font-size: 18px; /* Ajustar el tamaño de fuente para móviles */
+    padding: 8px 16px; /* Ajustar el padding para móviles */
+  }
+
   #caratula-real2 {
     background-image: url('../img/caratula-series2.jpg');
-    height: 900px;
+    height: 800px;
   }
   #caratula-real1 {
     background-image: url('../img/caratula-recientes2.jpg');
-    height: 900px;
+    height: 800px;
   }
   .carousel-item img {
     max-width: 60%; 
       height: auto; 
       margin: 0 auto; 
       display: block; 
+  }
+  #logo-footer {
+    max-width: 200px;
+  }
+  
+  .container {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Reduce el padding */
+  }
+
+  form {
+    padding: 20px; /* Ajusta el padding del formulario */
+  }
+
+  .form-label {
+    font-size: 16px; /* Tamaño de fuente más pequeño */
+  }
+
+  .form-control {
+    height: 45px; /* Ajusta la altura de los campos */
+  }
+
+  .btn-primary {
+  width: 100%; /* Botón ocupa todo el ancho */
+  padding: 12px; /* Ajusta el padding interno */
+  font-size: 18px; /* Tamaño de fuente del botón */
+  margin-top: 15px; /* Margen superior para separación */
   }
 }
