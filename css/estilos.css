@@ -1,14 +1,15 @@
 * {
   font-family: "Dosis", sans-serif;
   font-weight: 400;
-  margin: 0; /* Eliminar margenes globales */
-  padding: 0; /* Eliminar padding global */
+  margin: 0; 
+  padding: 0; 
 }
+
 
 body {
   color: #ffffff;
   padding-top: 50px;
-  background-color: black;
+  background-color: rgb(68, 68, 68);
   display: flex; /* Usar flexbox en el cuerpo */
   flex-direction: column; /* Alinear los elementos en columna */
   min-height: 100vh; /* Asegurar que el cuerpo ocupe al menos la altura de la ventana */
@@ -128,11 +129,19 @@ body {
   text-decoration: none;
 }
 
-body h1 {
-  font-weight: bold;
+h1 {
+  font-size: 40px;
+  font-weight: 700;
   text-align: center;
-  color: #5a0550;
+  color: #d2b49c;
 }
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #d2b49c;
+}
+
 body p {
   text-align: center;
   color: #b579ae;
@@ -186,7 +195,7 @@ body img {
   display: flex; /* Usar flexbox para centrar */
   flex-direction: column; /* Alinear los elementos en columna */
   align-items: center; /* Centrar los elementos horizontalmente */
-  background-color: #b579ae;
+  background-color: #9f8d81;
   padding: 2em;
   margin-bottom: 20px; /* Agregar margen inferior para separar del footer */
 }
@@ -286,9 +295,37 @@ body img {
   z-index: 0; /* Por debajo de la imagen */
 }
 
+/* galería social*/
+
+.gallery img {
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-bottom: 15px;
+}
+
+.gallery img:hover {
+  transform: scales(1.05);
+}
+
+.carousel-inner {
+  display: flex; /* Usar flexbox para centrar */
+  align-items: center; /* Centrar verticalmente *//
+}
+
+.carousel-item img {
+  max-width: 50%; /* Limitar el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: block; /* Asegurar que se comporte como un bloque */
+}
+
+.modal-content {
+  background-color: transparent; /* Eliminar el color de fondo */
+}
+
 footer {
   width: 100%;
-  background-color: #3d0036; /* Establece el color de fondo */
+  background-color: #ae8774; /* Establece el color de fondo */
   color: rgb(255, 255, 255); /* Color del texto */
   text-align: center;
   display: flex;
@@ -300,7 +337,7 @@ footer h3 {
   text-align: center;
 }
 footer div {
-  background-color: #3d0036; /* Establece el color de fondo */
+  background-color: #ae8774; /* Establece el color de fondo */
 }
 
 .form-control {
