@@ -87,7 +87,7 @@ body {
 }
 
 .logo-menu {
-  width: 63%; /* Ajusta el tamaño de la imagen */
+  width: 63%; 
   cursor: pointer;
   display: block; 
   margin: 0 auto; 
@@ -110,9 +110,9 @@ body {
 .menu-items a {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  display: block; /* Hacer que el enlace ocupe todo el ancho */
+  display: block; 
   transition: color 0.3s ease, text-decoration 0.3s ease;
-  font-weight: bold; /* Aumentar el peso de la tipografía */
+  font-weight: bold; 
 }
 
 .menu-items a:visited {
@@ -132,7 +132,7 @@ h1 {
   font-weight: 700;
   text-align: center;
   color: #ffffff;
-  margin-bottom: 5px; /* Espacio debajo del encabezado */
+  margin-bottom: 5px; 
 }
 
 h2 {
@@ -167,8 +167,8 @@ body p {
 #img-cursos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centra las imágenes */
-  gap: 10px; /* Espaciado entre imágenes */
+  justify-content: center; 
+  gap: 10px; 
 }
 
 .btn-sobre-mi {
@@ -177,11 +177,11 @@ body p {
   font-size: 16px; 
   background-color: #ffffff; 
   border: none; 
-  border-radius: 25px; /* Bordes redondeados */
-  text-align: center; /* Centrar texto */
-  text-decoration: none; /* Sin subrayado */
-  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
-  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  border-radius: 25px; 
+  text-align: center; 
+  text-decoration: none; 
+  transition: background-color 0.3s, transform 0.2s; 
+  cursor: pointer; 
 }
 
 .btn-sobre-mi:link {
@@ -190,7 +190,7 @@ body p {
 
 .btn-sobre-mi:hover {
   color: white;
-  background-color: #a05195; /* Color de fondo al pasar el mouse */
+  background-color: #a05195; 
   transform: translateY(-2px); /* Efecto de levantamiento */
 }
 
@@ -204,9 +204,9 @@ body p {
   margin: 20px; 
 }
 .sobre-mi-img {
-  max-width: 400px; /* Ajusta el tamaño máximo de la imagen */
-  margin-right: 20px; /* Espacio entre la imagen y el texto */
-  border-radius: 8px; /* Opcional: bordes redondeados */
+  max-width: 400px; 
+  margin-right: 20px; 
+  border-radius: 8px; 
 }
 
 .sobre-mi-texto {
@@ -239,7 +239,7 @@ body p {
 /*carátula realismo */
 #caratula-real1 {
   background-image: url('../img/caratula-recientes.jpg'); 
-  background-size: cover
+  background-size: cover;
   background-position: center;
   height: 600px; 
   display: flex;
@@ -252,7 +252,7 @@ body p {
 
 #caratula-real2 {
   background-image: url('../img/caratula-series.jpg');
-  background-size: cover
+  background-size: cover;
   background-position: center; 
   height: 600px; 
   display: flex; 
@@ -282,56 +282,56 @@ body p {
 
 #caratula-real1 a:visited,
 #caratula-real2 a:visited {
-  color: #ffffff; /* Color blanco para enlaces visitados */
+  color: #ffffff; 
 }
 
 .background-image a:hover {
-  text-decoration: underline; /* Subrayado al pasar el mouse */
+  text-decoration: underline; 
 }
 
 /* galerías */
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  max-width: 1080px; /* Ancho total de la cuadrícula */
-  margin: 0 auto; /* Centrar la cuadrícula */
-  padding: 0; /* Eliminar padding */
-  position: relative; /* Para posicionar imágenes en relación a este contenedor */
+  max-width: 1080px; 
+  margin: 0 auto; 
+  padding: 0; 
+  position: relative; 
 }
 
 .galeria img {
-  width: calc(100% - 10px); /* Restar margen para ajustar el ancho */
-  height: auto; /* Mantener la proporción de la imagen */
-  object-fit: cover; /* Asegurar que la imagen cubra el área sin deformarse */
+  width: calc(100% - 10px); 
+  height: auto; 
+  object-fit: cover; 
   margin: 5px; 
   transition: transform 0.3s ease; /* Suavizar la transición al cambiar tamaño */
-  position: relative; /* Establecer posición relativa para cada imagen */
-  z-index: 0; /* Z-index por defecto */
+  position: relative; 
+  z-index: 0; 
 }
 
 .galeria img:hover {
   transform: scale(2); /* Ampliar la imagen a 1.5x su tamaño */
-  z-index: 1; /* Asegurar que la imagen ampliada esté por encima de las demás */
+  z-index: 1; 
 }
 
 /* Ajustar la imagen ampliada para centrarla respecto del viewport */
 .galeria img:hover::after {
   content: ""; /* Agregar un pseudo-elemento */
-  position: fixed; /* Fijo en el viewport */
-  top: 50%; /* Centrarse verticalmente */
-  left: 50%; /* Centrarse horizontalmente */
-  width: calc(150%); /* Ampliar a 150% del tamaño */
-  height: calc(150%); /* Ampliar a 150% del tamaño */
-  transform: translate(-50%, -50%); /* Centrar el pseudo-elemento */
-  background: #e0d7df; /* Fondo semi-transparente */
-  z-index: 0; /* Por debajo de la imagen */
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  width: calc(150%); 
+  height: calc(150%); 
+  transform: translate(-50%, -50%); 
+  background: #e0d7df; 
+  z-index: 0;
 }
 
 /* galería social*/
 
 .carousel-inner {
-  display: flex; /* Usar flexbox para centrar */
-  align-items: center; /* Centrar verticalmente *//
+  display: flex; 
+  align-items: center; 
 }
 
 .carousel-item img {
@@ -342,7 +342,7 @@ body p {
 }
 
 .modal-content {
-  background-color: transparent; /
+  background-color: transparent; 
 }
 
 footer {
@@ -409,8 +409,8 @@ footer div {
     border: none; 
     border-radius: 25px; 
     text-decoration: none; 
-    text-align: center; /
-    transition: background-color 0.3s, transform 0.2s; /
+    text-align: center; 
+    transition: background-color 0.3s, transform 0.2s; 
     cursor: pointer; 
     margin: 1em; 
 }
@@ -457,16 +457,23 @@ form {
 }
 
 .btn-primary {
-  background-color: #a05195; /* Color de fondo del botón */
-  border: none; /* Sin borde */
+  background-color: #a05195; 
+  border: none; 
   transition: background-color 0.3s; /* Transición suave al cambiar color */
-  margin-top: 20px; /* Margen superior para separación */
-  padding: 12px 20px; /* Espaciado interno del botón */
-  font-size: 18px; /* Tamaño de fuente del botón */
+  margin-top: 20px; 
+  padding: 12px 20px; 
+  font-size: 18px; 
 }
 
 .btn-primary:hover {
-  background-color: #ae8774; /* Color al pasar el mouse */
+  background-color: #ae8774; 
+}
+
+#info-catedra h3 {
+  text-align: center;
+}
+#info-catedra h5 {
+  text-align: center;
 }
 
 @media (max-width: 900px) {
@@ -478,7 +485,7 @@ form {
 @media (max-width: 768px) {
   h1 {
     padding-top: 100px;
-    font-size: 40px; /* Reduce el tamaño del encabezado */
+    font-size: 40px; 
   }
   .menu {
     position: fixed;
@@ -524,28 +531,27 @@ form {
   }
    
   .content {
-    height: auto; /* Permitir que la altura se ajuste al contenido */
-    padding: 20px; /* Agregar algo de espacio alrededor */
+    height: auto; 
+    padding: 20px; 
   }
 
   .logo {
-    max-width: 100%; /* Hacer que el logo ocupe el ancho completo */
-    opacity: 1; /* Asegurarte de que el logo sea visible */
+    max-width: 100%; 
+    opacity: 1; 
   }
 
   .buttons {
-    position: relative; /* Cambiar a posición relativa para móviles */
+    position: relative; 
     right: auto; 
     top: auto; 
-    transform: none; /* Remover transformaciones */
-    opacity: 1; /* Asegurarte de que los botones sean visibles */
-    flex-direction: column; /* Mantener la dirección en columna */
-    align-items: center; /* Centrar los botones */
+    transform: none; 
+    opacity: 1; 
+    flex-direction: column;
+    align-items: center;
   }
-
   .transparent-button {
-    font-size: 18px; /* Ajustar el tamaño de fuente para móviles */
-    padding: 8px 16px; /* Ajustar el padding para móviles */
+    font-size: 18px; 
+    padding: 8px 16px; 
   }
 
   #caratula-real2 {
@@ -569,29 +575,35 @@ form {
   }
   
   .container {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    padding: 10px; /* Reduce el padding */
+    width: 100%; 
+    padding: 10px; 
   }
 
   form {
-    padding: 20px; /* Ajusta el padding del formulario */
+    padding: 20px; 
   }
 
   .form-label {
-    font-size: 16px; /* Tamaño de fuente más pequeño */
+    font-size: 16px;
   }
 
   .form-control {
-    height: 45px; /* Ajusta la altura de los campos */
+    height: 45px; 
   }
 
   .btn-primary {
-  width: 100%; /* Botón ocupa todo el ancho */
-  padding: 12px; /* Ajusta el padding interno */
-  font-size: 18px; /* Tamaño de fuente del botón */
-  margin-top: 15px; /* Margen superior para separación */
+  width: 100%; 
+  padding: 12px; 
+  font-size: 18px; 
+  margin-top: 15px; 
   }
-  #caratula-real1 a,
+  #caratula-real1 a {
+    color: white; 
+    font-weight: 800; 
+    text-decoration: none; 
+    font-size: 40px; 
+    transition: color 0.3s, font-weight 0.3s; 
+    }
   #caratula-real2 a {
   color: white; 
   font-weight: 800; 
@@ -599,16 +611,18 @@ form {
   font-size: 40px; 
   transition: color 0.3s, font-weight 0.3s; 
   }
+
   #caratula-real1 a:hover,
   #caratula-real1 a:focus,
   #caratula-real2 a:hover,
   #caratula-real2 a:focus {
-    color: #a05195; /* Color violeta al pasar el mouse */
-    font-weight: bold; /* Hacer el texto más grueso */
+    color: #a05195; 
+    font-weight: bold; 
   }
-
-  #caratula-real1 a:visited,
+  #caratula-real1 a:visited {
+    color: #ffffff; 
+  }
   #caratula-real2 a:visited {
-    color: #ffffff; /* Color blanco para enlaces visitados */
+    color: #ffffff; 
   }
 }
