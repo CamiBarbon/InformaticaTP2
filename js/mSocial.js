@@ -6,7 +6,7 @@ const carouselInner = document.getElementById('carouselImages');
 $(document).ready(function() {
     $('#carouselModal').modal('show');
     loadImages(); // Cargar imágenes al abrir el modal
-    setInterval(changeImage, 30000); // Cambiar imágenes cada 30 segundos
+    setInterval(changeImage, 20000); 
 });
 
 // Función para cargar las imágenes en el carrusel
@@ -14,7 +14,7 @@ function loadImages() {
     carouselInner.innerHTML = ''; // Limpiar contenido previo
 
     for (let i = 0; i < 27; i++) {
-        const srcIndex = (currentIndex + i) % totalImages + 1; // Rutas de imágenes
+        const srcIndex = (currentIndex + i) % totalImages + 1;
         const isActive = i === 0 ? 'active' : ''; // Solo la primera imagen es activa
         carouselInner.innerHTML += `
             <div class="carousel-item ${isActive}">

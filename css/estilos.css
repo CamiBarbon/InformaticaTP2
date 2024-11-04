@@ -263,17 +263,26 @@ body p {
   margin: 20px 0;
 }
 
-#caratula-real1 a:link{
-  color: white;
-  font-weight: 500;
-  text-decoration: none; /* Sin subrayado */
-  font-size: 40px; /* Tamaño de fuente */
+#caratula-real1 a,
+#caratula-real2 a {
+  color: #ffffff; 
+  font-weight: 800; 
+  text-decoration: none; 
+  font-size: 70px; 
+  transition: color 0.3s, font-weight 0.3s; 
 }
-#caratula-real2 a:link{
-  color: white;
-  font-weight: 500;
-  text-decoration: none; /* Sin subrayado */
-  font-size: 40px; /* Tamaño de fuente */
+
+#caratula-real1 a:hover,
+#caratula-real1 a:focus,
+#caratula-real2 a:hover,
+#caratula-real2 a:focus {
+  color: #db71cd; 
+  font-weight: bold;
+}
+
+#caratula-real1 a:visited,
+#caratula-real2 a:visited {
+  color: #ffffff; /* Color blanco para enlaces visitados */
 }
 
 .background-image a:hover {
@@ -412,7 +421,9 @@ footer div {
     color: #a05195;
 }
 
-
+span {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
 /* Estilos del formulario */
 .container {
   width: 800px; 
@@ -545,6 +556,8 @@ form {
     background-image: url('../img/caratula-recientes2.jpg');
     height: 800px;
   }
+
+
   .carousel-item img {
     max-width: 60%; 
       height: auto; 
@@ -577,5 +590,25 @@ form {
   padding: 12px; /* Ajusta el padding interno */
   font-size: 18px; /* Tamaño de fuente del botón */
   margin-top: 15px; /* Margen superior para separación */
+  }
+  #caratula-real1 a,
+  #caratula-real2 a {
+  color: white; 
+  font-weight: 800; 
+  text-decoration: none; 
+  font-size: 40px; 
+  transition: color 0.3s, font-weight 0.3s; 
+  }
+  #caratula-real1 a:hover,
+  #caratula-real1 a:focus,
+  #caratula-real2 a:hover,
+  #caratula-real2 a:focus {
+    color: #a05195; /* Color violeta al pasar el mouse */
+    font-weight: bold; /* Hacer el texto más grueso */
+  }
+
+  #caratula-real1 a:visited,
+  #caratula-real2 a:visited {
+    color: #ffffff; /* Color blanco para enlaces visitados */
   }
 }
